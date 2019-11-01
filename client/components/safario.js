@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux';
 import Head from './head';
 import Header from './Header';
 import Footer from './Footer';
@@ -31,8 +31,6 @@ class Safario extends React.Component {
     )
   }
 }
-
-Safario.propTypes = {}
 
 const mapStateToProps = () => ({})
 

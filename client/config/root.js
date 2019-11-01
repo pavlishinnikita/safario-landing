@@ -11,7 +11,6 @@ import { bindActionCreators } from 'redux'
 import store, { history } from '../redux';
 
 import Safario from '../components/safario';
-import Home from '../components/home';
 import DummyView from '../components/dummy-view';
 import NotFound from '../components/404';
 
@@ -85,10 +84,7 @@ export default (props) => {
       <ConnectedRouter history={history} location={props.location} context={props.context}>
         <StartupConnected>
           <Switch>
-            <Route exact path="/" component={() => <DummyView />} />
-            <Route exact path="/dashboard" component={() => <Home />} />
-            <Route exact path="/safario" component={() => <Safario />} />
-            <Route exact path="/salo/*" component={() => <Home />} />
+            <Route exact path="/" component={() => <Safario />} />
             <PrivateRouteConnected exact path="/hidden-route" component={() => <DummyView />} />
             <Route component={() => <NotFound />} />
           </Switch>
