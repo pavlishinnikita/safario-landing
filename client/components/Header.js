@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
   return (
-    <header className="header_area">
+    <header className={'header_area '.concat(props.test)}>
       <div className="main_menu">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container box_1620">

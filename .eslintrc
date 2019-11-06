@@ -17,6 +17,7 @@
     "es6": true
   },
   "rules": {
+    "no-console": "off",
     "space-before-function-paren": "off",
     "react/prefer-stateless-function": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],

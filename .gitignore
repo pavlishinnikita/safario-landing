@@ -69,3 +69,6 @@ yarn-error.log
 
 #yarn
 yarn.lock
+
+#dev landing template folder
+client/safario

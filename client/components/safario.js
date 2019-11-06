@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Head from './head';
@@ -10,27 +10,30 @@ import About from './About';
 import TourSection from './TourSection';
 import TestimonialSection from './TestimonialSection';
 
-class Safario extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
+const Safario = () => {
+  const [navbar, setNavbar] = useState('');
+  const onWheel = (e) => {
+    if (e.deltaY > 0) {
+      setNavbar('navbar_fixed');
+    } else {
+      setNavbar('');
+    }
   }
 
-  render() {
-    return (
-      <div>
-        <Head title="Home" />
-        <Header />
-        <HeroBaner />
-        <ServiceArea />
-        <About />
-        <TourSection />
-        <TestimonialSection />
-        <Footer />
-      </div>
-    )
-  }
+  return (
+    <div onWheel={onWheel}>
+      <Head title="Home" />
+      <Header test={navbar} />
+      <HeroBaner />
+      <ServiceArea />
+      <About />
+      <TourSection />
+      <TestimonialSection />
+      <Footer />
+    </div>
+  )
 }
+
 
 const mapStateToProps = () => ({})
 
