@@ -1,19 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = (props) => {
+  const [options, setOptions] = useState(
+    {
+      x: false,
+      class: ''
+    }
+  );
+  const optionsToggle = () => {
+    const test = options.class === '' ? 'show' : '';
+    setOptions({
+      x: !options.x,
+      class: test
+    });
+  }
   return (
     <header className={'header_area '.concat(props.test)}>
       <div className="main_menu">
         <nav className="navbar navbar-expand-lg navbar-light">
           <div className="container box_1620">
             <Link className="navbar-brand logo_h" to="/"> <img src="/images/logo.png" alt="" /></Link>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button onClick={optionsToggle} className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded={options.x} aria-label="Toggle navigation">
               <span className="icon-bar" />
               <span className="icon-bar" />
               <span className="icon-bar" />
             </button>
-            <div className="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <div className={'collapse navbar-collapse offset '.concat(options.class)} id="navbarSupportedContent">
               <ul className="nav navbar-nav menu_nav justify-content-end">
                 <li className="nav-item active"><Link className="nav-link" to="/">Home</Link></li>
                 <li className="nav-item"><Link className="nav-link" to="about">About</Link></li>

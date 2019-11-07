@@ -19,7 +19,6 @@ const Safario = () => {
       setNavbar('');
     }
   }
-
   return (
     <div onWheel={onWheel}>
       <Head title="Home" />
