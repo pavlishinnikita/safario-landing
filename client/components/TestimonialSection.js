@@ -9,8 +9,6 @@ const TestimonialSection = () => {
           <h2>Our client says</h2>
           <p>Fowl have fruit moveth male they are that place you will lesser</p>
         </div>
-
-
         <div className="owl-carousel owl-theme testimonial pb-xl-5">
           <div className="testimonial__item">
             <div className="row">
@@ -24,7 +22,7 @@ const TestimonialSection = () => {
                   <h3>Daniel heart</h3>
                   <p>Project manager, Nestle</p>
                   <p className="testimonial__i">Simple test</p>
-                  <span className="testimonial__icon"><i className="ti-quote-right" /></span>
+                  <span className="testimonial__icon"><i className="ti ti-quote-right" /></span>
                 </div>
               </div>
             </div>

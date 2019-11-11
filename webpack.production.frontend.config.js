@@ -190,6 +190,9 @@ const config = {
           cache: false,
         }
       },
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),    
     new ExtractTextPlugin({ filename: 'css/main.css', disable: false, allChunks: true }),

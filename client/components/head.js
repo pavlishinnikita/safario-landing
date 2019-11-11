@@ -8,6 +8,7 @@ const Head = (props) => (
     <meta charSet="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#FF0000" />
+    <link rel="icon" href="/images/Fevicon.png" type="image/png" />
   </Helmet>
 );
 

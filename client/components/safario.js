@@ -12,7 +12,7 @@ import TestimonialSection from './TestimonialSection';
 
 const Safario = () => {
   const [navbar, setNavbar] = useState('');
-  const navOffsetTop = 100; // in future: get header height + 50
+  const navOffsetTop = 101; // in future: get header height + 50
   const onScroll = () => {
     const scroll = window.scrollY;
     if (scroll >= navOffsetTop) {
