@@ -89,7 +89,7 @@
     "history": "^4.10.1",
     "install": "^0.13.0",
     "isomorphic-fetch": "^2.2.1",
-    "next": "^9.1.1",
+    "next": "^9.3.2",
     "openssl": "^1.1.0",
     "prop-types": "^15.7.2",
     "raf": "^3.4.1",
